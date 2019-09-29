@@ -4,7 +4,6 @@ import { User, Properties }     from '../../providers';
 import { MyApp }                                    from '../../app/app.component';
 import { FormBuilder, FormGroup, Validators       } from '@angular/forms';
 import { InAppBrowser, InAppBrowserOptions } from '@ionic-native/in-app-browser';
-import { MainPage, MyPropertiesPage } from '../../pages';
 
 
 @IonicPage()

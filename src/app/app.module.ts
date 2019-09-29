@@ -20,6 +20,7 @@ import { StatusBar                            } from '@ionic-native/status-bar';
 import { User, Properties, Api } from '../providers/';
 
 
+import { AndroidPermissions } from '@ionic-native/android-permissions';
 
 
 
@@ -62,6 +63,7 @@ export function createTranslateLoader(http: HttpClient) {
     MyApp
   ],
   providers: [
+    AndroidPermissions,
     Api, 
     User, 
     Properties,

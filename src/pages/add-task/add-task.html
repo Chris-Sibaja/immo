@@ -43,6 +43,9 @@
     <br>
     <br> 2. Sube la foto
 
+
+
+
     <div class="image" (click)="getPicture()" [style.backgroundImage]="getProfileImageStyle()">
 
       <div class="profile-image-wrapper">
@@ -61,8 +64,7 @@
 
     </div>
 
-    <input type="file" #fileInput id="fileInput" accept="image/*" style="visibility: hidden; height: 0px" name="files[]"
-      (change)="processWebImage($event)" />
+    <input type="file" #fileInput id="fileInput" accept="image/*" style="visibility: hidden; height: 0px" name="files[]"    (change)="processWebImage($event)" />
 
     <div class="two-buttons">
 
@@ -71,80 +73,15 @@
         <ion-icon name="md-checkmark" color="white" *ngIf="view.icon"> </ion-icon>
         Cambiar
       </button>
+                                                                                                           
 
-      <button color="ionblue" ion-button (click)="process(1)" small [disabled]="!isReadyToSave">
-        <ion-spinner *ngIf="spinner.panel6" name="bubbles" color="white" padding-right></ion-spinner> &nbsp;
-        <span>Subir imagen</span>
-      </button>
 
     </div>
 
   </ion-item>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       <ion-item>
-        <button color="green" ion-button (click)="save()" full [disabled]="valid()" >Guardar</button>
+        <button color="green" ion-button (click)="save()" full [disabled]="valid() && isReadyToSave" >Guardar</button>
       </ion-item>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     </form>
 

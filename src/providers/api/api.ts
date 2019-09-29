@@ -5,8 +5,10 @@ import { AlertController } from 'ionic-angular';
 @Injectable()
 export class Api {
 
-  public url              : string = '' ;
-  public urlRoot          : string = '';
+  //public url              : string = 'http://api.immosystem.com.mx' ;
+  public url: string = 'https://cortana.immosystem.com.mx/api/index.php';
+
+  public urlRoot: string = 'http://agent.immosystem.com.mx/api/index.php';
   public options          : any ;
   public filtre           : any =[]; 
   
@@ -18,7 +20,7 @@ export class Api {
   public filtreBuyer: any = [];
 
   public totalProperties    = 0;
-  public totalDevelopments  = 0;
+  public totalDevelopments  = 0; 
   public totalUnits         = 0;
 
   public propertyid = 0;  
