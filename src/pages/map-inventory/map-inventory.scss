@@ -1,0 +1,38 @@
+page-map-inventory {
+
+   #mapa {
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+
+
+   //Div { search content }
+    #search_content {
+        background-color:#efefef;
+        color: #151A21;
+        width:95%;
+        border-radius:7px;
+        margin: 0px auto;
+    }
+
+    //Input SearchBar
+    #search{
+        padding: 0px 0px 0px 10px;
+        height: 30px;
+        width: 92%;  
+        border:none;      
+        border-radius: 7px;
+        font-size: 12px;
+        background-color: #efefef;
+    } 
+
+  .toolbar-ios .segment-button ion-icon {
+        font-size: 1.2rem !important;
+        
+    }
+
+    .bar-button-menutoggle {
+        min-width: 30px !important;
+    }
+}

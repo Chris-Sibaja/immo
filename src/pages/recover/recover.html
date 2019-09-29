@@ -1,0 +1,114 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons left>
+      <button ion-button icon-only>
+        <ion-icon color="b4" name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Recuperar contraseña</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list class="box-shadow ion-list-white" [formGroup]="commentForm" *ngIf="email">
+
+
+    <ion-item >
+      <ion-label stacked>Correo electrónico</ion-label>
+      <ion-input  formControlName="email" name="email" [(ngModel)]="data.email"></ion-input>
+    </ion-item>
+
+
+    <ion-item >
+      <ion-row>
+
+        <ion-col text-left text-capitalize>
+          <button ion-button color="green" block (click)="addComment()" small [disabled]="!commentForm.valid">
+            <ion-spinner *ngIf="spinner" name="bubbles" color="white" padding-right></ion-spinner> &nbsp; Aceptar
+          </button>
+        </ion-col>
+
+      </ion-row>
+
+      <p text-wrap text-center>{{msg}}</p>
+    </ion-item>
+
+
+
+  </ion-list>
+
+  <ion-list class="box-shadow ion-list-white" [formGroup]="commentForm2" *ngIf="vcode">
+
+
+    <ion-item class="textarea" >
+      <ion-label stacked>Código de validación</ion-label>
+      <ion-input formControlName="code2" name="code2" [(ngModel)]="code2"></ion-input>
+    </ion-item>
+
+
+    <ion-item >
+      <ion-row>
+
+        <ion-col text-left text-capitalize>
+          <button ion-button color="green" id="resend" disabled block (click)="addComment()" (click)="resendActivate()" small>
+            <ion-spinner *ngIf="spinner2" name="bubbles" color="white" padding-right></ion-spinner> &nbsp; Reenviar correo
+          </button>
+        </ion-col>
+        <ion-col text-left text-capitalize>
+          <button ion-button color="green" block (click)="addCode()" small [disabled]="!commentForm2.valid">
+            <ion-spinner *ngIf="spinner2" name="bubbles" color="white" padding-right></ion-spinner> &nbsp; Aceptar
+          </button>
+        </ion-col>
+
+      </ion-row>
+      <br>
+      <br>
+      <p text-wrap>* Vuelve a intentar en  
+        <strong> {{count}}</strong> seg
+      </p>
+      <br>
+      <p text-wrap>* Enviamos un correo a 
+        <strong> {{data.email}}</strong>
+      </p>
+      <p></p>
+      <br>
+      <p (click)="change()">
+        <strong>Cambiar correo</strong>
+      </p>
+    </ion-item>
+
+
+
+  </ion-list>
+
+
+  <ion-list class="box-shadow ion-list-white" [formGroup]="commentForm3" *ngIf="pass">
+
+    <ion-item class="textarea" >
+      <ion-label stacked>Contraseña</ion-label>
+      <ion-input formControlName="pass2" name="pass2" [(ngModel)]="pass2"></ion-input>
+    </ion-item>
+    <ion-item class="textarea" >
+      <ion-label stacked>Confirmar contraseña</ion-label>
+      <ion-input formControlName="pass3" name="pass3" [(ngModel)]="pass3"></ion-input>
+    </ion-item>
+
+    <ion-item >
+        <ion-row>
+  
+          <ion-col text-left text-capitalize>
+            <button ion-button color="green" block (click)="addPass()" small [disabled]="!(commentForm3.valid && pass2 == pass3)">
+              <ion-spinner *ngIf="spinner" name="bubbles" color="white" padding-right></ion-spinner> &nbsp; Aceptar
+            </button>
+          </ion-col>
+    
+        </ion-row>
+  
+        <p *ngIf="pass2 != '' && (pass2 != pass3)" text-wrap text-center>Las contraseñas no coinciden</p>
+      </ion-item>
+
+
+  </ion-list>
+
+</ion-content>

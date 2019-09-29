@@ -1,0 +1,31 @@
+
+<ion-card  >
+
+	<ion-slides id="flayer" pager speed="800" (click)="goInfo(data.folio)">
+
+		<ion-slide  >			
+			   <img src="{{data.smallphoto}}"class="card-image" />
+		 </ion-slide>	
+		
+	</ion-slides>
+
+	<p item-end class="folio badge-gray">#{{data.folio}}</p>
+
+	<ion-buttons class="card-text">
+
+		<ion-label  no-margin-bottom class="card-title badge">{{data.price}} | {{data.operation}}</ion-label>
+		<p>
+			<span *ngIf="data.bedrooms > 0"> {{data.bedrooms}} Habitaciones </span>
+			<span *ngIf="data.bathrooms > 0"> {{data.bathrooms}} Baños </span>
+		</p>
+	</ion-buttons>
+
+
+	<ion-item>		
+		<img class="card-inmobi" *ngIf="data.company.logo != 'empty'" src="{{data.company.logo}}" item-start>		
+		<p (click)="goInfo(data.folio)">{{data.namePropertyEs}}</p>
+			
+		<p (click)="goInfo(data.folio)">{{data.city}}, {{data.state}} </p>
+	</ion-item>
+
+</ion-card>

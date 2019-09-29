@@ -1,0 +1,31 @@
+<ion-menu [content]="content" type="overlay">
+
+    <ion-content id="toggle_content">
+
+        <ion-item class="image-menu" no-padding-left no-margin-left style="background-color: transparent !important;">
+
+            <div class="image-menu-bn">
+                <img style="height: 70px " src="http://agent.immosystem.com.mx/view/assets/images/ico.png">
+            </div>
+
+            <div margin-left text-center style="background-color: transparent !important;" class="slogan title immo">IMMO CRM 360</div>
+
+        </ion-item>
+
+            <ion-list class="l-ios">
+          
+            <button id="item-list" *ngIf="user.userInfo.global == 1"  class="toggle" ion-item icon-start menuClose (click)="openPage({component : 'MapInventoryPage'})"
+                [disabled]="sesion">
+                <ion-icon id="icons" item-left name="md-globe"></ion-icon>
+                Denuncias Ciudadanas
+            </button>
+
+            <button id="item-list" class="toggle" ion-item icon-start menuClose (click)="openPage({component : 'WelcomePage'})">
+                <ion-icon id="icons" item-left name="ios-power-outline"></ion-icon>
+                Cerrar Sesión
+            </button>
+
+        </ion-list>
+    </ion-content>
+</ion-menu>
+<ion-nav #content [root]="rootPage"></ion-nav>

@@ -1,0 +1,20 @@
+page-recover {
+
+    .scroll-content{
+        padding: 10px !important; 
+    }
+    
+    ion-avatar{
+        background-color: #fb6600;
+        border-radius: 50%;
+        text-align: center;
+        padding-top: 12px;
+        color : white;
+        font-weight: bold;
+    }
+
+    h2{
+        text-overflow: ellipsis !important;
+    }
+
+}

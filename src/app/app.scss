@@ -1,0 +1,572 @@
+.title, .toolbar-title{
+    font-size: 16px !important; 
+    font-weight: 600 !important;
+    padding: 0 0 1px !important;
+}
+
+h1, h2, p, span, label{
+    font-weight: 450;
+}
+
+.label, .card p, p{
+    color: color($colors,re3);
+}
+
+.button{
+    border-radius: 4px;
+}
+
+.fas{
+    font-size: 1.1em !important;
+}
+
+
+
+/////////////////////////////////////////////////////////////////////
+//                     GLOBAL CSS                                  //
+/////////////////////////////////////////////////////////////////////
+
+
+
+.load-property .toast-message:before {
+  color: black;
+  display: inline-block;
+  font-family: "Ionicons";
+  font-style: normal;
+  font-weight: bolder;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  padding-right: 10px;
+  font-size: 2rem;
+}
+
+
+// ion-card{
+//     background: color($colors,white) !important;
+    
+// }
+
+// ion-item{
+//     background: color($colors,white) !important;
+    
+// }
+
+//Elimina las lineas verdes de los formularios
+
+.item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner,
+.item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
+    border-bottom-color: transparent;
+    box-shadow: inset 0 -1px 0 0 #dedede;
+}
+
+.card {
+    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.44) !important;
+}
+
+
+p ion-icon{
+    font-size: 1.2em !important;
+}
+
+.three-buttons{
+
+    .button{
+        width: 30% !important;
+    }
+
+}
+
+.two-buttons{
+
+    .button{
+        width: 49.33333% !important;
+        margin: auto !important;
+    }
+
+}
+
+.one-button{
+    .button {
+         width: 50% !important;
+         margin: auto !important;
+    }
+}
+
+
+.text-margin{
+    margin: 5px auto !important;
+    padding: 0px 5px !important; 
+    border: 1px solid #E4E4E4 !important;
+    width: 95% !important; 
+    height: 41px !important;
+    background-color: rgba(255, 255, 255, 0.1) !important; 
+    white-space: nowrap !important;
+    border-radius: 4px !important; 
+}
+
+.textarea{
+    height: 100px !important;
+
+    .text-input {
+        margin-left: 0px !important;
+        color: color($colors, re) !important;
+        height: 85% !important;
+    }
+}
+
+.box-shadow{
+    border-radius: 2px;
+       box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.44) !important;
+
+}
+
+
+
+.ion-list-white{
+                background-color: white !important;
+    ion-item{
+                        background-color: white !important;
+
+    }
+}
+
+
+    ion-card{
+                    background-color: white !important;
+
+    }
+ion-card{
+    background-color: white !important;
+    ion-item{
+            background-color: white !important;
+
+    }
+}
+
+
+/////////////////////////////////////////////////////////////////////
+//                     MEDIA QUERY                                 //
+/////////////////////////////////////////////////////////////////////
+
+@media screen and (max-device-width: 320px) {
+    h1{
+        font-size: 17px !important;
+    }
+    
+    h2{
+        font-size:  14px !important;
+    }
+    
+    p{
+        font-size: 13px !important;
+    }
+    
+    span{
+        font-size: 13px !important;
+    }
+    
+    label{
+        font-size: 13px !important;
+    }
+
+    input, optgroup, select{
+        font-size: 12px !important;
+
+    }
+}
+
+
+@media screen and (min-device-width: 321px) {
+    h1{
+        font-size: 18px !important;
+    }
+    
+    h2{
+        font-size:  15px !important;
+    }
+    
+    p{
+        font-size: 14px !important;
+    }
+    
+    span{
+        font-size: 14px !important;
+    }
+    
+    label{
+        font-size: 14px !important;
+    }
+      input, optgroup, select{
+        font-size: 13px !important;
+
+    }
+}
+
+@media screen and (min-device-width: 860px) {
+    h1{
+        font-size: 19px !important;
+    }
+    
+    h2{
+        font-size:  16px !important;
+    }
+    
+    p{
+        font-size: 15px !important;
+    }
+    span{
+        font-size: 15px !important;
+    }
+    
+    label{
+        font-size: 15px !important;
+    }
+
+      input, optgroup, select{
+        font-size: 14px !important;
+
+    }
+}
+
+/////////////////////////////////////////////////////////////////////
+//                     POPOVERS                                    //
+/////////////////////////////////////////////////////////////////////
+
+.popover-map{
+
+    .popover-content {
+        position: absolute !important;
+        width: 100% !important;
+        left: 0px !important;
+        top: auto !important;
+        bottom: 0px !important;
+    }  
+
+       
+    ion-card {
+        
+        position: relative !important;
+        text-align: center !important;
+        width: 100% !important;
+        margin: 0px !important;
+        padding: 0px !important;
+
+        //fotografias de la propiedad
+        .card-image {                       
+            float: left;
+            width: 100% !important; 
+            height: 240px !important;
+        } 
+
+        .card-text {
+
+            position: absolute;      
+            bottom:75px;                 
+            text-align: left;     
+      
+            
+            .card-subtitle span, .card-title, p {
+                color: color($colors, whiteImmo) !important;
+                padding: 0px 10px 0px 10px;
+                
+            }
+            .card-title{
+                margin-bottom: 0px;
+            }
+        }
+
+        .card-inmobi {
+            width: auto;
+            height: 40px;
+        }  
+    
+        .folio{
+            top: 0px;
+            position: absolute; 
+            z-index: 100;
+            right: 0px;
+            padding: 0px 10px 0px 10px;
+        }
+        .badge {
+            border-radius: 3px;
+            color: #fff;
+            background-color: #00a651 !important;
+        }
+         .badge-gray {
+            border-radius: 2px;
+            color: #fff;
+            background-color: color($colors, re) !important;
+        }
+
+    }
+}
+
+///////////////////////////////////////////////////////////////////
+//                      MENU PRINCIPAL                           //
+///////////////////////////////////////////////////////////////////
+
+#toggle_content {
+ion-list{
+    background-color: transparent !important;
+ }
+    background-color: color($colors, blackImmo) !important; 
+  
+
+     .label, .card p{
+         color: #aaabac !important;
+         font-size: 16px !important;
+     }
+    
+    .item-md {
+        padding-left: 10px !important;
+        padding-right: 10px !important;   
+    }
+    .item-inner { //Elimina borde por defecto al texto de la lista
+        border-bottom: none !important;      
+        margin-left: 10px;  
+    }
+
+    a {
+        text-decoration: none !important;
+    }
+
+    #item-list {
+        background: transparent !important;
+        border-top: 1px solid #333333 !important;
+        border-bottom: none !important;
+      
+    }
+    .list-header{
+                background: transparent !important;
+
+    }
+    #icons {
+        font-size: 24px !important;
+        background-color: #3e454c !important;
+        border-radius: 50% !important;
+        width: 28px !important;
+        margin: 0px !important;
+        padding: 2px !important;
+        color: color($colors, whiteImmo) !important;
+        height: 28px !important;
+    }
+
+    .image-menu{
+
+        height: 140px;    
+        background-color: color($colors, blackImmo) !important; 
+        background-size: 100%;
+        padding-left: 0px !important;
+
+        .item-inner{
+            padding-left: 0px !important;
+            margin-left: 0px !important;
+            padding-right: 0px !important;
+            margin-right: 0px !important;
+        }
+
+        .label{
+            margin: 0px !important;
+        }
+
+    .immo{      
+            margin: 0px !important;
+            font-weight: 500 !important;                                                                                                                                                         
+        }
+
+        .title-crm{      
+            padding: 7px !important;
+            font-size: 13px !important;
+            width: 100%;
+            height: 30px;
+            color: #aaabac !important;
+            margin: 5px 0px !important;
+            background-color: rgba(0, 0, 0, 0.18);
+            border-radius: 2px;
+        }
+    
+        .image-menu-bn{ 
+            padding-top:4px;
+        text-align: center;
+            font-size: 20px !important;
+            font-weight: bold !important;
+            color: #ffffff;     
+        
+        }
+
+    }
+
+    
+}
+.about {
+    text-transform: uppercase !important;
+    font-size: 10px !important;
+    text-align: center;
+}
+
+
+///////////////////////////////////////////////////////////////////
+// Transparent status bar and awesome tool bar style             //
+///////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.platform-ios {
+  
+    page-home, page-language-details {
+        @extend %super-bar;
+    }
+
+    .ion-page {
+        ion-header {
+            padding-top: $cordova-md-statusbar-padding;
+            background-color: color($colors, b4);    
+        }
+    }
+
+    %super-bar {
+
+        .scroll-content {
+            margin-top: 0 !important;
+        }
+
+        ion-header, .toolbar-background {
+
+            background-color: initial !important;
+            transition: background-color 1s ease;
+
+            &:after {
+                height: 0  !important;
+            }
+
+        }
+
+        .opaque {
+
+            background-color: color($colors, b4) !important;
+
+            &:after {
+                height: 5px !important;
+            }
+
+            .toolbar-background {
+                background-color: color($colors, b4);
+            }
+        }
+    }
+}
+
+///////////////////////////////////////
+// fontawesome                       //
+///////////////////////////////////////
+
+
+@import "./assets/scss/fontawesome.scss";
+@import "./assets/scss/solid.scss";
+@import "./assets/scss/brands.scss";
+
+.coffee {
+  @extend %fa-icon;
+  @extend .fas;
+
+  &:before {
+    content: fa-content($fa-var-coffee);
+  }
+
+}
+
+
+.user {
+  @extend %fa-icon;
+  @extend .fas;
+
+  &:before {
+    content: fa-content($fa-var-user);
+  }
+}
+
+.twitter {
+  @extend %fa-icon;
+  @extend .fab;
+
+  &:before {
+    content: fa-content($fa-var-twitter);
+  }
+
+}
+
+.bed {
+  @extend %fa-icon;
+  @extend .fas;
+
+  &:before {
+    content: fa-content($fa-var-bed);
+  }
+
+}
+
+.map-marker-alt {
+  @extend %fa-icon;
+  @extend .fas;
+
+  &:before {
+    content: fa-content($fa-var-map-marker-alt);
+  }
+
+}
+
+.file-image {
+  @extend %fa-icon;
+  @extend .fas;
+
+  &:before {
+    content: fa-content($fa-var-file-image);
+  }
+
+}
+
+.backward {
+  @extend %fa-icon;
+  @extend .fas;
+
+  &:before {
+    content: fa-content($fa-var-backward);
+  }
+
+}
+
+
+.award {
+  @extend %fa-icon;
+  @extend .fas;
+
+  &:before {
+    content: fa-content($fa-var-award);
+  }
+
+}

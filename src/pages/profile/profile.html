@@ -1,0 +1,117 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons left>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu" color="white"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-title>Mi perfil</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="profile-image-wrapper">
+
+
+ 
+    <div class="profile-image" text-center #profilePic [style.backgroundImage]="getProfileImageStyle()">
+
+      <p icon-only class="button-fab" style="margin-left: 100px;">  
+      </p>
+    
+    </div>
+
+
+    <div class="item-detail" padding>
+      <h2>{{user.userInfo.fullname}}</h2>
+      <p>{{user.userInfo.position}}</p>
+    </div>
+  </div>
+
+  <ion-list no-lines class="ion-list-white">
+
+
+    <ion-item>
+      <h1 item-start>
+      <strong>  Información de la cuenta</strong>
+      </h1>
+
+    </ion-item>
+
+
+    <ion-item>
+      <h2 item-start>
+        Empresa
+      </h2>
+      <p item-end>{{user.userInfo.company}}</p>
+    </ion-item>
+
+    <ion-item>
+      <h2 item-start>
+        Teléfono
+      </h2>
+      <p item-end>{{user.userInfo.cellphone}}</p>
+    </ion-item>
+
+    <ion-item>
+      <h2 item-start>
+        Correo
+      </h2>
+      <p item-end>{{user.userInfo.email}}</p>
+    </ion-item>
+
+
+    <ion-item>
+      <h1 item-start>
+        <strong> Oficinas de la cuenta</strong>
+      </h1>
+    
+    </ion-item>
+    
+    <ion-item >   
+      <p *ngFor="let office of user.userOffice" > {{office.officename}}</p>
+    </ion-item>
+
+
+
+    <ion-item *ngIf="user.userInfo.permission == 3">
+      <h1 item-start>
+       <strong> Permisos de la cuenta</strong>
+      </h1>
+
+    </ion-item>
+
+    <ion-item *ngIf="user.userInfo.permission == 3">
+      <h2 item-start>
+      Permisos
+      </h2>
+      <p item-end>{{permissions}}</p>
+    </ion-item>
+
+
+    <ion-item text-wrap *ngIf="user.userInfo.online == 0">
+
+      <ion-item class="text-margin" text-wrap text-centre *ngIf="!doc || !id || !company">
+        <p>Antes de habilitar tu cuenta debemos validar tus documentos.</p>
+      </ion-item>
+
+      <ion-item class="text-margin" text-wrap text-centre *ngIf="doc && id && company">
+        <p>Tus documentos fueron aprobados, pronto habilitaremos tu cuenta.</p>
+      </ion-item>
+
+
+    </ion-item>
+
+
+
+  </ion-list>
+
+
+
+
+
+</ion-content>

@@ -1,0 +1,54 @@
+page-profile {
+
+  ion-content{
+      background-color: #fff !important; 
+  }
+
+
+  ion-item{
+      background-color: transparent !important;
+      color: color($colors, re2) !important;
+  }
+
+  .editAvatar{
+    background-color: black;
+    color: white;
+    top: 80px;
+    position: relative;
+    height: 26px;
+    padding: 5px;
+    border-radius: 5; 
+  }
+
+  
+  .profile-image-wrapper {
+    text-align: center;
+    margin: 20px 0;
+        .profile-image {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+
+      display: inline-block;
+
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+      .profile-image-placeholder {
+      display: inline-block;
+
+      background-color: #eee;
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+
+      font-size: 9px;
+
+ 
+    } 
+
+  }
+
+
+}

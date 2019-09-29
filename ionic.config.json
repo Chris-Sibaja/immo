@@ -1,0 +1,7 @@
+{
+  "name": "brocknet",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

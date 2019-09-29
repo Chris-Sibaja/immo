@@ -1,0 +1,61 @@
+{
+  "BACK_BUTTON_TEXT": "Atras",
+  "NAME": "Nombre",
+  "KEY": "Codigo",
+  "LOADKEY_BUTTON" : "Activar cuenta",
+  "PASSWORD": "Contraseña",
+  "EMAIL": "Email",
+  "LOGIN": "Iniciar sesión",
+  "SIGNUP": "Registrarse",
+
+  "LOADKEY_TITLE" : "Activar cuenta",
+  "UPLOADDOCUMENTS_TITLE" : "Subir documentos",
+
+  "TAB1_TITLE": "Items",
+  "TAB2_TITLE": "Buscar",
+  "TAB3_TITLE": "Ajustes",
+
+  "MAP_TITLE": "Mapa",
+  "TUTORIAL_SKIP_BUTTON": "Omitir",
+  "TUTORIAL_CONTINUE_BUTTON": "Continuar",
+
+  "TUTORIAL_SLIDE1_TITLE": "Bienvenido/a",
+  "TUTORIAL_SLIDE1_DESCRIPTION": "Bienvenido a tu PLATAFORMA INMOBILIARIA BROKNET , la red de negocios inmobiliarios más grande en México",
+
+  "TUTORIAL_SLIDE2_TITLE": "Broknet Móvil",
+  "TUTORIAL_SLIDE2_DESCRIPTION": "En Broknet podrás tener acceso a los DESARROLLOS MAS IMPORTANTES A NIVEL NACIONAL  con más de 5500 propiedades a tu disposición listos para que los comercialices ",
+
+  "TUTORIAL_SLIDE3_TITLE": "Tú decide como trabajar",
+  "TUTORIAL_SLIDE3_DESCRIPTION": "EASY BROKNET : Refiere un cliente y gana tu comisión ó MASTER BROKNET  : Trabaja como Asociado Broknet cerrando la venta junto con nosotros y cobra una comisión de mayor rango",
+
+  "TUTORIAL_SLIDE4_TITLE": "¡Sólo crea tu cuenta de usuario y sigue los pasos es muy sencillo !",
+
+  "SETTINGS_TITLE": "Ajustes",
+  "SETTINGS_OPTION1": "Opción 1",
+  "SETTINGS_OPTION2": "Opción 2",
+  "SETTINGS_OPTION3": "Opción 3",
+  "SETTINGS_OPTION4": "Opción 4",
+
+  "SETTINGS_PAGE_PROFILE": "Editar Perfil",
+
+  "WELCOME_TITLE": "Bienvenido/a",
+
+  "WELCOME_INTRO": "Mensaje de bienvenida",
+
+  "LOGIN_TITLE": "Iniciar sesión",
+  "LOGIN_ERROR": "No se ha podido iniciar sesión. Por favor revisa la información de la cuenta e inténtalo de nuevo.",
+  "LOGIN_BUTTON": "Iniciar sesión",
+  "SIGNUP_TITLE": "Registro",
+  "SIGNUP_ERROR": "No se ha podido crear la cuenta. Por favor revisa la información de la cuenta e inténtalo de nuevo.",
+  "SIGNUP_BUTTON": "Registrarse",
+
+  "LIST_MASTER_TITLE": "Items",
+
+  "ITEM_CREATE_TITLE": "Nuevo Item",
+  "ITEM_CREATE_CHOOSE_IMAGE": "Añadir Imagen",
+
+  "CARDS_TITLE": "Desarollos destacados",
+
+  "SEARCH_TITLE": "Buscar",
+  "LOADKEY" : "Activar cuenta"
+}

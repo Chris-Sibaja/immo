@@ -1,0 +1,64 @@
+page-welcome {
+
+
+   .error{
+     color: color($colors, danger) !important;
+   }
+
+    .login-form {    
+        background-color: aquamarine;  
+    }
+    
+    .button {
+        background-color: #c12336;
+    }
+
+    ion-content {
+        position: absolute;
+        background-image: url(http://agent.immosystem.com.mx/view/assets/images/ico.png);
+        background-position-x: 49%;
+        background-repeat: no-repeat;
+        background-color: #1f232a !important;
+        background-position-y: 80px;
+    }
+   
+    .main { 
+        margin: 0px auto 16px auto;
+        margin-top: 160px;
+        width: 90%;
+        padding-bottom: 5px !important;
+    }
+    .form { 
+        margin-top: 20px;
+    }
+
+    .scroll-content { 
+        padding-bottom:  5px !important;
+    }
+
+    .item {
+        height: 40px;
+    }
+
+    ion-label{
+        color: #999 !important;
+        
+    }
+    .transparent{
+        background-color: transparent !important;
+    }
+    .message {
+        text-align: center;
+        font-weight: 700;
+    }
+    .saveLogin{
+        color: aliceblue;
+    }
+
+    .title .item-inner, .label{
+        margin: 0px !important;
+        padding: 0px !important;
+        
+    }
+
+}

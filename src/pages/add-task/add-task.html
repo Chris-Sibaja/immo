@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar color="header">
+
+    <ion-title>Agregar Denuncia</ion-title>
+
+    <ion-buttons right>
+      <button *ngIf="!steps" ion-button icon-only (click)="close()">
+        <ion-icon color="whiteImmo" name="ios-close-circle"></ion-icon>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding >
+
+  
+  <ion-list class="slideTest ion-list-white box-shadow" >
+
+    <form class="iform"  [formGroup]="leadForm">
+
+
+      <ion-item>
+
+        <ion-label>Tipo de denuncia <sup> *</sup></ion-label>
+        <ion-select formControlName="subject" [(ngModel)]="event.subject" name="subject">
+          <ion-option value="1">Denuncia Vial</ion-option>
+          <ion-option value="2">Denuncia Sanitaria</ion-option>
+          <ion-option value="3">Denuncia de Robo</ion-option>
+        </ion-select>
+
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Descripción <sup> *</sup></ion-label>
+        <ion-textarea type="text"  formControlName="descripcion" [(ngModel)]="event.descripcion" name="descripcion"></ion-textarea>
+      </ion-item>
+
+
+      <ion-item>
+        <button color="green" ion-button (click)="save()" full [disabled]="valid()" >Guardar</button>
+      </ion-item>
+    </form>
+
+  </ion-list>
+</ion-content>
