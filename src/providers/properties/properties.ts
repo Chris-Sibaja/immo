@@ -14,8 +14,9 @@ export class Properties {
 
     properties          : any = []; 
     userProperties      : any = []; 
-    markers             : any = []; 
+    markers             : any = [];     
 
+    property : any ;
     seccion_1: any = [];   
     seccion_2: any = [];   
     seccion_3: any = [];   

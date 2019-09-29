@@ -11,7 +11,30 @@ import { AndroidPermissions } from '@ionic-native/android-permissions';
 
 
         
-
+/**
+ * 
+ * 3:05
+ * 
+ * Tiempo 3 minutos
+ * 
+ * 
+ * Tiempo  de 2 minutos para responder
+ * 
+ * 
+ * FINAL   
+ * 
+ * 5 MINUTOS PRESENTACION
+ * 
+ * 
+ * 
+ * 5 MINUTOS DE PREGUNTAS
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ */
 
 @IonicPage()
 @Component({
@@ -119,14 +142,26 @@ export class AddTaskPage {
 
 
   save() { 
+   
+    let marker : any = [];
 
-    console.log(this.event.subject);
-    console.log(this.event.descripcion)
-    console.log(this.getProfileImageStyle());
+    marker.push({ 'name': 'Image' }, { 'description': this.event.descripcion }, { 'lat': 18.653499 }, { 'lng': -91.804922 }, { 'image': this.getProfileImageStyle() });
 
+
+    if (this.event.subject == '1'){
+      this.properties.seccion_1.push(marker);
+    }else if(this.event.subject == '2'){
+      this.properties.seccion_2.push(marker);
+
+    } else if (this.event.subject == '3') {
+      this.properties.seccion_3.push(marker);
+
+    }
+
+    console.log(this.properties.seccion_1);
+  
+    this.properties.generateMarks;
   }
-
-
 
 
   goCliente() {
@@ -164,6 +199,7 @@ export class AddTaskPage {
           handler: () => {
 
             this.viewCtrl.dismiss({ data: 'reload' });
+            
           }
         }
       ]

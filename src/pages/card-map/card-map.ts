@@ -23,7 +23,7 @@ export class CardMapPage {
 
         //Hace una peticion para detalles de propiedad del folio seleccionado
         this.properties.query(folio).subscribe(data => {   
-            this.properties.property = data.json().data;
+            this.properties.property = 0;
             this.navCtrl.push('PropertyDetailPage', 2);
         });
 

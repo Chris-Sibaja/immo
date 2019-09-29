@@ -140,7 +140,10 @@ export class MyApp {
      
   
       if (this.nav.getActive().id == page.component && page.component == 'MapInventoryPage') {
-      } else {
+
+      } else if (page.component == 'MapInventoryPage'){
+        this.nav.push('AddTaskPage');
+      }else{
         this.nav.setRoot(component, {}, { animate: true, direction: 'forward' });        
       }
 
