@@ -37,9 +37,115 @@
       </ion-item>
 
 
+  <ion-item text-wrap>
+
+    1. Toma una foto o selecciona alguna de tu galería
+    <br>
+    <br> 2. Sube la foto
+
+    <div class="image" (click)="getPicture()" [style.backgroundImage]="getProfileImageStyle()">
+
+      <div class="profile-image-wrapper">
+
+
+        <span *ngIf="!this.propertyImages.controls.profilePic.value">Seleccionar imagen</span>
+
+
+
+        <div class="profile-image" *ngIf="this.propertyImages.controls.profilePic.value">
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+    <input type="file" #fileInput id="fileInput" accept="image/*" style="visibility: hidden; height: 0px" name="files[]"
+      (change)="processWebImage($event)" />
+
+    <div class="two-buttons">
+
+      <button color="orange" ion-button (click)="getPicture()" [disabled]="!isReadyToSave" small>
+        <ion-spinner *ngIf="view.spinner" name="bubbles" color="white" padding-right></ion-spinner>
+        <ion-icon name="md-checkmark" color="white" *ngIf="view.icon"> </ion-icon>
+        Cambiar
+      </button>
+
+      <button color="ionblue" ion-button (click)="process(1)" small [disabled]="!isReadyToSave">
+        <ion-spinner *ngIf="spinner.panel6" name="bubbles" color="white" padding-right></ion-spinner> &nbsp;
+        <span>Subir imagen</span>
+      </button>
+
+    </div>
+
+  </ion-item>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <ion-item>
         <button color="green" ion-button (click)="save()" full [disabled]="valid()" >Guardar</button>
       </ion-item>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </form>
 
   </ion-list>

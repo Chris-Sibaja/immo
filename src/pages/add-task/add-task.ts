@@ -1,7 +1,6 @@
 
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController, Platform, ViewController } from 'ionic-angular';
-import { Calendar, CalendarOptions } from '@ionic-native/calendar';
 import { Storage } from '@ionic/storage';
 import { User, Properties }from '../../providers';
 import { FormBuilder, FormGroup, Validators } from '../../../node_modules/@angular/forms';
@@ -32,7 +31,7 @@ export class AddTaskPage {
 
   public leadForm: FormGroup;
 
-  constructor(public formBuilder: FormBuilder, public navCtrl: NavController,    public navParams: NavParams,    private storage: Storage,    public alertCtrl: AlertController,    private calendar: Calendar,    public platform: Platform,private user: User,public viewCtrl: ViewController) {
+  constructor(public formBuilder: FormBuilder, public navCtrl: NavController,    public navParams: NavParams,    private storage: Storage,    public alertCtrl: AlertController, public platform: Platform,private user: User,public viewCtrl: ViewController) {
 
 
     this.leadForm = formBuilder.group({
@@ -58,7 +57,7 @@ export class AddTaskPage {
   } 
 
 
-  save() {
+  save() { 
 
     console.log(this.event.subject);
     console.log(" - ");

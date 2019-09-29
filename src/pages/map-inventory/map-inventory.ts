@@ -96,17 +96,19 @@ export class MapInventoryPage {
   }
  
   updateMarks(seccion){
+
+
     this.hiddenRoutes = '';
     this.map.removeObjects(this.map.getObjects());
 
-  //this.map.removeAll();
+    let icon = new H.map.Icon('assets/icon/location2.png'), coords = this.userMarkCors;
 
-   var markers: any = [];
-   //Elimina TODOS los marcadores del mapa
-   var $this = this;
+    this.userMark = new H.map.Marker(coords, { icon: icon });
+    this.userMark.id = 'user_location';
+    this.map.addObject(this.userMark);
 
 
-  this.setMarkersv2();
+    this.setMarkersv2();
    
 
 
@@ -138,6 +140,8 @@ export class MapInventoryPage {
           center: { lat: resp.coords.latitude, lng: resp.coords.longitude }
         }
       );
+
+      //$this.map.addLayer(defaultLayers.normal.trafficincidents);
 
       let icon = new H.map.Icon('assets/icon/location2.png'), coords = { lat: resp.coords.latitude, lng: resp.coords.longitude };
       $this.userMark = new H.map.Marker(coords, { icon: icon });
@@ -226,8 +230,10 @@ export class MapInventoryPage {
 
     for (var i = 0; i < properties.length; i++) {
 
-    
-      this.hiddenRoute (properties[i]['mark'].getPosition().lat + ',' + properties[i]['mark'].getPosition().lng )
+      console.log('ocultando rutas');
+      console.log(properties[i]['mark'].getPosition().lat + ',' + properties[i]['mark'].getPosition().lng);
+
+      this.hiddenRoute(properties[i]['mark'].getPosition().lat + ',' + properties[i]['mark'].getPosition().lng)
        
     
 
@@ -304,11 +310,11 @@ export class MapInventoryPage {
     var routingParameters = {
       'mode': this.routing,
       'waypoint0': 'geo!' + this.userPos.lat + ',' + this.userPos.lng,
-      'waypoint1': cor,
+      'waypoint1': 'geo!' + cor,
       'avoidlinks': this.hiddenRoutes,
       'representation': 'display'
     };
-
+    console.log(routingParameters);
     router.calculateRoute(routingParameters, onResult,
       function (error) {
         alert(error.message);
@@ -323,15 +329,15 @@ export class MapInventoryPage {
 
 
   hiddenRoute(waypoint) {
-
+ 
     var routingParameters2 = {
       'mode': this.routing,
       'waypoint0': 'geo!' + waypoint,
-      'waypoint1': waypoint,
+      'waypoint1': 'geo!'+ waypoint,
       'representation': 'display'
     };
 
-
+ 
     var $this = this;
 
     var onResult2 = function (result) {
@@ -339,15 +345,16 @@ export class MapInventoryPage {
       if ($this.hiddenRoutes == '') {
         $this.hiddenRoutes = result.response.route[0].waypoint[0].linkId
       } else {
-        $this.hiddenRoutes + ',' + result.response.route[0].waypoint[0].linkId;
+        $this.hiddenRoutes = $this.hiddenRoutes  + ',' + result.response.route[0].waypoint[0].linkId;
 
       }
+      console.log($this.hiddenRoutes)
     };
 
 
     // Get an instance of the routing service:
     var router = this.platformMap.getRoutingService();
-
+    console.log('calculando rutas', routingParameters2);
     router.calculateRoute(routingParameters2, onResult2,
       function (error) {
         alert(error.message);

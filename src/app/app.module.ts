@@ -20,6 +20,10 @@ import { StatusBar                            } from '@ionic-native/status-bar';
 import { User, Properties, Api } from '../providers/';
 
 
+
+
+
+
 import { File } from '@ionic-native/file';
 
 import * as ionicGalleryModal from 'ionic-gallery-modal';

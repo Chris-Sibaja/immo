@@ -12,14 +12,9 @@ export class Properties {
 
 
 
-    documents           : any = []; //Documentos de una propiedad
-    properties          : any = []; //Propiedades Comunidad immo
-    userProperties      : any = []; //Propiedades del usuario
-    userPropertiesString: any = []; //Folios de las propiedades del usuario
-    property            : any = []; //Datos de una propiedad activa (seleccionada)
-    last                : any = []; // ???
-    propertiesEnlaceb   : any = []; //Propiedades enlace (No usado)
-    markers             : any = []; //Coleccion de propiedades con ubicación en el mapa.
+    properties          : any = []; 
+    userProperties      : any = []; 
+    markers             : any = []; 
 
     seccion_1: any = [];   
     seccion_2: any = [];   
@@ -50,22 +45,6 @@ export class Properties {
 
             return new Promise<any>(resolve => {
 
-                // this.api.post('m=findProperty&app=true&share=1' ).subscribe(data => {
-
-                //     if (data.status == 200 && data.json().status == 200) {
-                //         //Guarda todas las propiedades, actualiza contadores globales
-                //         this.properties             = data.json().data;
-                //         this.api.totalProperties    = this.properties.length;
-                //         this.api.totalUnits         = this.api.totalDevelopments + this.api.totalProperties;
-
-                //         //Finaliza la carga, guarda marcadores.
-                //         resolve(true);
-                //         this.generateMarks();
-                //     }
-                // });
-
-
-
                 this.properties = {
                     "seccion_1": [
                         {
@@ -77,7 +56,22 @@ export class Properties {
                             "name": "name",
                             "lat": 18.645877,
                             "lng": -91.829351
+                        },
+                        {
+                            "name": "name",
+                            "lat": 18.658575, 
+                            "lng":- 91.817512
+                        },
+                        {
+                            "name": "name",
+                            "lat": 18.644448, 
+                            "lng":- 91.819750
                         }
+
+                 
+
+
+
                     ],
                     "seccion_2": [
                         {
