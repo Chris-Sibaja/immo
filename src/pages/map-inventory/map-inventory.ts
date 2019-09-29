@@ -147,7 +147,11 @@ export class MapInventoryPage {
       $this.userMark = new H.map.Marker(coords, { icon: icon });
       $this.userMark.id = 'user_location';
       $this.userMarkCors = coords;
+      $this.properties.userMarkCors = coords;
       $this.map.addObject($this.userMark);
+
+
+      
 
       $this.map.addEventListener('longpress', function (evt) {
 
@@ -228,10 +232,13 @@ export class MapInventoryPage {
     var markers: any = [];
     var $this = this;
 
+    console.log(this.seccion);
+
     for (var i = 0; i < properties.length; i++) {
 
-      console.log('ocultando rutas');
-      console.log(properties[i]['mark'].getPosition().lat + ',' + properties[i]['mark'].getPosition().lng);
+      console.log(properties[i]['mark']);
+
+
 
       this.hiddenRoute(properties[i]['mark'].getPosition().lat + ',' + properties[i]['mark'].getPosition().lng)
        
@@ -329,7 +336,7 @@ export class MapInventoryPage {
 
 
   hiddenRoute(waypoint) {
- 
+    this.hiddenRoutes = '';
     var routingParameters2 = {
       'mode': this.routing,
       'waypoint0': 'geo!' + waypoint,

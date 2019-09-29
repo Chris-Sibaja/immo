@@ -15,7 +15,7 @@ export class Properties {
     properties          : any = []; 
     userProperties      : any = []; 
     markers             : any = [];     
-
+    userMarkCors : any ;
     property : any ;
     seccion_1: any = [];   
     seccion_2: any = [];   
@@ -189,6 +189,7 @@ export class Properties {
         //Recorre todas las propiedades, las que tienen ubicación las guarda en markers para colocar en el mapa
 
 
+
         for (let i = 0; i < this.properties.seccion_1.length; i++) {
 
 
@@ -200,6 +201,11 @@ export class Properties {
                 let icon = new H.map.Icon('assets/icon/s3.png'),
                     coords = { lat: location['lat'], lng: location['lng'] };
                     location['mark'] = new H.map.Marker(coords, { icon: icon });
+
+
+                location['mark'].addEventListener('click', function (evt) {
+                    console.log('click');
+                });
 
                 this.seccion_1.push(location);
 
@@ -244,42 +250,9 @@ export class Properties {
         }
 
 
-        for (let i = 0; i < this.properties.seccion_4.length; i++) {
-
-
-            let location = this.properties.seccion_4[i];
-
-            if (location['lat'] == 0 || location['lng'] == 0) {
-            } else {
-
-                let icon = new H.map.Icon('assets/icon/s2.png'),
-                    coords = { lat: location['lat'], lng: location['lng'] };
-                location['mark'] = new H.map.Marker(coords, { icon: icon });
-
-                this.seccion_4.push(location);
-
-            }
-        }
-
-
-        for (let i = 0; i < this.properties.seccion_5.length; i++) {
-
-
-            let location = this.properties.seccion_5[i];
-
-            if (location['lat'] == 0 || location['lng'] == 0) {
-            } else {
-
-                let icon = new H.map.Icon('assets/icon/s2.png'),
-                    coords = { lat: location['lat'], lng: location['lng'] };
-                location['mark'] = new H.map.Marker(coords, { icon: icon });
-
-                this.seccion_5.push(location);
-
-            }
-        }
-
-
+        console.log(this.properties.seccion_1);
+        console.log(this.properties.seccion_2);
+        console.log(this.properties.seccion_3);
 
     }
 

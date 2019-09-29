@@ -145,22 +145,20 @@ export class AddTaskPage {
    
     let marker : any = [];
 
-    marker.push({ 'name': 'Image' }, { 'description': this.event.descripcion }, { 'lat': 18.653499 }, { 'lng': -91.804922 }, { 'image': this.getProfileImageStyle() });
-
 
     if (this.event.subject == '1'){
-      this.properties.seccion_1.push(marker);
+      this.properties.properties.seccion_1.push({ 'name': 'Image', 'description': this.event.descripcion, 'lat': this.properties.userMarkCors.lat, 'lng': this.properties.userMarkCors.lng, 'image': this.getProfileImageStyle() });
     }else if(this.event.subject == '2'){
-      this.properties.seccion_2.push(marker);
+      this.properties.properties.seccion_2.push({ 'name': 'Image', 'description': this.event.descripcion, 'lat': this.properties.userMarkCors.lat, 'lng': this.properties.userMarkCors.lng, 'image': this.getProfileImageStyle() });
 
     } else if (this.event.subject == '3') {
-      this.properties.seccion_3.push(marker);
+      this.properties.properties.seccion_3.push({ 'name': 'Image', 'description': this.event.descripcion, 'lat': this.properties.userMarkCors.lat, 'lng': this.properties.userMarkCors.lng, 'image': this.getProfileImageStyle() });
 
     }
-
+    
     console.log(this.properties.seccion_1);
   
-    this.properties.generateMarks;
+    this.properties.generateMarks();
   }
 
 
