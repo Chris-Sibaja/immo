@@ -50,24 +50,45 @@ export class Properties {
                         {
                             "name": "name",
                             "lat": 18.653699,
-                            "lng": -91.822069
+                            "lng": -91.822069,
+                            "description" : "descripcion",
+                            "image": ""
                         },
                         {
                             "name": "name",
                             "lat": 18.645877,
-                            "lng": -91.829351
+                            "lng": -91.829351,
+                            "description" : "descripcion",
+                            "image": ""
                         },
                         {
                             "name": "name",
                             "lat": 18.658575, 
-                            "lng":- 91.817512
+                            "lng":- 91.817512,
+                            "description" : "descripcion",
+                            "image": ""
                         },
                         {
                             "name": "name",
                             "lat": 18.644448, 
-                            "lng":- 91.819750
+                            "lng":- 91.819750,
+                            "description" : "descripcion",
+                            "image": ""
+                        },
+                        {
+                            "name": "name",
+                            "lat": 18.6363599, 
+                            "lng":-91.8262028,
+                            "description" : "descripcion",
+                            "image": ""
+                        },
+                        {
+                            "name": "name",
+                            "lat": 18.6373359, 
+                            "lng":-91.778953,
+                            "description" : "descripcion",
+                            "image": ""
                         }
-
                  
 
 
@@ -77,48 +98,75 @@ export class Properties {
                         {
                             "name": "name",
                             "lat": 18.653584,
-                            "lng": -91.820976
+                            "lng": -91.820976,
+                            "description" : "descripcion",
+                            "image": ""
+                        },
+                        {
+                            "name": "name",
+                            "lat": 18.6517307,
+                            "lng": -91.7816137,
+                            "description" : "descripcion",
+                            "image": ""
+                        },
+                        {
+                            "name": "name",
+                            "lat": 18.6481118,
+                            "lng": -91.8100666,
+                            "description" : "descripcion",
+                            "image": ""
+                        },
+                        {
+                            "name": "name",
+                            "lat": 18.652981,
+                            "lng": -91.826235,
+                            "description" : "descripcion",
+                            "image": ""
                         },
                         {
                             "name": "name",
                             "lat": 18.660944,
-                            "lng": -91.820491
+                            "lng": -91.820491,
+                            "description" : "descripcion",
+                            "image": ""
                         }],
                     "seccion_3": [
                         {
                             "name": "name",
                             "lat": 18.653123,
-                            "lng": -91.827410
+                            "lng": -91.827410,
+                            "description" : "descripcion",
+                            "image": ""
+                        },
+                        {
+                            "name": "name",
+                            "lat": 18.6585413,
+                            "lng": -91.8301081,
+                            "description" : "descripcion",
+                            "image": ""
+                        },
+                        {
+                            "name": "name",
+                            "lat": 18.655502,
+                            "lng": -91.8455683,
+                            "description" : "descripcion",
+                            "image": ""
+                        },
+                        {
+                            "name": "name",
+                            "lat": 18.6319752,
+                            "lng": -91.8287957,
+                            "description" : "descripcion",
+                            "image": ""
                         },
                         {
                             "name": "name",
                             "lat": 18.647143,
-                            "lng": -91.817213
-                        }],
-                    "seccion_4": [
-                        {
-                            "name": "name",
-                            "lat": 18.645877,
-                            "lng": -91.829351
-                        },
-                        {
-                            "name": "name",
-                            "lat": 18.647142,
-                            "lng": -91.786382
-                        }],
-                    "seccion_5": [
-                        {
-                            "name": "name",
-                            "lat": 18.653699,
-                            "lng": -91.817578
-                        },
-                        {
-                            "name": "name",
-                            "lat": 18.653699,
-                            "lng": -91.822069
+                            "lng": -91.817213,
+                            "description" : "descripcion",
+                            "image": ""
                         }]
                 
-
                     };
 
 
